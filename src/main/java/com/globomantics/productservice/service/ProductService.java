@@ -1,46 +1,45 @@
 package com.globomantics.productservice.service;
 
 import com.globomantics.productservice.model.Product;
+import com.globomantics.productservice.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface ProductService {
-    /**
-     * Returns the product with the specified id.
-     *
-     * @param id        ID of the product to retrieve.
-     * @return          The requested Product if found.
-     */
-    Optional<Product> findById(Integer id);
+@Service
+public class ProductService {
 
-    /**
-     * Returns all products in the database.
-     *
-     * @return          All products in the database.
-     */
-    List<Product> findAll();
+    private final ProductRepository productRepository;
 
-    /**
-     * Updates the specified product, identified by its id.
-     *
-     * @param product   The product to update.
-     * @return          True if the update succeeded, otherwise false.
-     */
-    boolean update(Product product);
+    @Autowired
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
-    /**
-     * Saves the specified product to the database.
-     *
-     * @param product   The product to save to the database.
-     * @return          The saved product.
-     */
-    Product save(Product product);
 
-    /**
-     * Deletes the product with the specified id.
-     * @param id        The id of the product to delete.
-     * @return          True if the operation was successful.
-     */
-    boolean delete(Integer id);
+    public Optional<Product> findById(Integer id) {
+        return productRepository.findById(id);
+    }
+
+
+    public List<Product> findAll() {
+        return productRepository.findAll();
+    }
+
+
+    public boolean update(Product product) {
+        return productRepository.update(product);
+    }
+
+
+    public Product save(Product product) {
+        product.setVersion(1);
+        return productRepository.save(product);
+    }
+
+    public boolean delete(Integer id) {
+        return productRepository.delete(id);
+    }
 }

@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -21,20 +24,19 @@ import java.util.Optional;
 /**
  * Tests the ProductService.
  */
-@ExtendWith(SpringExtension.class)
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class ProductServiceTest {
 
     /**
      * The service that we want to test.
      */
-    @Autowired
+    @InjectMocks
     private ProductService service;
 
     /**
      * A mock version of the ProductRepository for use in our tests.
      */
-    @MockBean
+    @Mock
     private ProductRepository repository;
 
     @Test
