@@ -1,6 +1,7 @@
 # productservice
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=louisthomas_productservice&metric=alert_status)](https://sonarcloud.io/dashboard?id=louisthomas_productservice) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=louisthomas_productservice&metric=coverage)](https://sonarcloud.io/dashboard?id=louisthomas_productservice)
+[![Known Vulnerabilities](https://snyk.io/test/github/louisthomas/productservice/badge.svg)](https://snyk.io/test/github/louisthomas/productservice)
 
 Base on product-service from the TDD with Spring and Unit 5 PluralSight course.
 
@@ -18,10 +19,7 @@ Great [article](https://thepracticaldeveloper.com/2017/07/31/guide-spring-boot-c
 ### Todos:
 - [ ] Add integration test with [test containers](https://github.com/testcontainers/testcontainers-java)
 - [ ] Add flyway database migration tool
-- [ ] Add Snyk dependencies security scan
-- [ ] Add dependabot automated dependency updates
+- [X] Add Snyk dependencies security scan
+- [X] Add dependabot automated dependency updates
 - [ ] Add deployment to Pivotal Web service
-
-
-
 
