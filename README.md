@@ -21,5 +21,5 @@ Great [article](https://thepracticaldeveloper.com/2017/07/31/guide-spring-boot-c
 - [ ] Add flyway database migration tool
 - [X] Add Snyk dependencies security scan
 - [X] Add dependabot automated dependency updates
-- [ ] Add deployment to Pivotal Web service
+- [X] Add deployment to Pivotal Web service
 
