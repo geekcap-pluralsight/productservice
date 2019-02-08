@@ -3,4 +3,4 @@ applications:
   - name: product-service-demo
     memory: 1G
     buildpack: java_buildpack
-    target: target/productservice-0.0.1-SNAPSHOT.jar
+    target: /github/workspace/target/productservice-0.0.1-SNAPSHOT.jar
