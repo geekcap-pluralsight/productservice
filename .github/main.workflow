@@ -19,5 +19,6 @@ action "Deploy to PWS" {
     SPACE = "experimentations"
     USERNAME = "louis-thomas.lamontagne@desjardins.com"
     APP_NAME = "product-service-demo"
+    ARTIFACT_PATH = "target/productservice-0.0.1-SNAPSHOT.jar"
   }
 }
