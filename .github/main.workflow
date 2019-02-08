@@ -1,6 +1,6 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Build"]
+  resolves = ["Build", "Deploy to PWS"]
 }
 
 action "Build" {
@@ -19,5 +19,5 @@ action "Deploy to PWS" {
     SPACE = "experimentations"
     USERNAME = "louis-thomas.lamontagne@desjardins.com"
     APP_NAME = "product-service-demo"
-   }
- }
+  }
+}
