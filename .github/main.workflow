@@ -1,6 +1,6 @@
 workflow "New workflow" {
-  on = "push"
   resolves = ["Build", "Deploy to PWS"]
+  on = "release"
 }
 
 action "Build" {
