@@ -88,7 +88,7 @@
 		<dependency>
 			<groupId>com.github.database-rider</groupId>
 			<artifactId>rider-junit5</artifactId>
-			<version>1.6.0</version>
+			<version>1.7.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.springtestdbunit</groupId>
