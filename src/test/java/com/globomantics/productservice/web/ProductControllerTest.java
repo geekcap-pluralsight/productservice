@@ -19,9 +19,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -50,7 +48,7 @@ class ProductControllerTest {
 
                 // Validate the response code and content type
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
 
                 // Validate the headers
                 .andExpect(header().string(HttpHeaders.ETAG, "\"1\""))
@@ -90,7 +88,7 @@ class ProductControllerTest {
 
                 // Validate the response code and content type
                 .andExpect(status().isCreated())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
 
                 // Validate the headers
                 .andExpect(header().string(HttpHeaders.ETAG, "\"1\""))
@@ -119,7 +117,7 @@ class ProductControllerTest {
 
                 // Validate the response code and content type
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
 
                 // Validate the headers
                 .andExpect(header().string(HttpHeaders.ETAG, "\"2\""))

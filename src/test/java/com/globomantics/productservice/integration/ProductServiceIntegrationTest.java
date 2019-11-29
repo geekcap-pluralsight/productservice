@@ -51,7 +51,7 @@ class ProductServiceIntegrationTest {
 
                 // Validate the response code and content type
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
 
                 // Validate the headers
                 .andExpect(header().string(HttpHeaders.ETAG, "\"1\""))
@@ -88,7 +88,7 @@ class ProductServiceIntegrationTest {
 
                 // Validate the response code and content type
                 .andExpect(status().isCreated())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
 
                 // Validate the headers
                 .andExpect(header().string(HttpHeaders.ETAG, "\"1\""))
@@ -115,7 +115,7 @@ class ProductServiceIntegrationTest {
 
                 // Validate the response code and content type
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
 
                 // Validate the headers
                 .andExpect(header().string(HttpHeaders.ETAG, "\"3\""))
